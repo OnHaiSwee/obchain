@@ -11,20 +11,7 @@
 if [ $# -ne 1 ]; then
     echo "Usage: bash work.sh start|stop|restart."
     exit 1
-fi
-
-# Increase memory limit that JVM can use to avoid OOM error:
-# 80% of your physical memory may be a proper ceiling that JVM can use.
-# By default there, JVM initializes with 1g memory and can use 32g at most.
-JVM_OPTIONS="-Xms1g -Xmx32g"
-
-JAR_FILE_PATH="./build/libs/java-obc.jar"
-PID_FILE_PATH="java-obc.pid"
-LOG_FILE_PATH="java-obc.log"
-
-CONF_FILE_PATH="./build/resources/main/config.conf"
-
-PRIVATE_KEY="650950B193DDDDB35B6E48912DD28F7AB0E7140C1BFDEFD493348F02295BD812"
+fi295BD812"
 
 case "${1}" in
     start)
